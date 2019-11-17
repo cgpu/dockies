@@ -1,6 +1,8 @@
 # dockies
 Useful scripts, snippets and guidelines for common tasks related to docker
 
+
+## Centos and very big container
 If a container is too big and you're working in an Centos based EC2 instance (does not work for ubuntu), this might work:
 
 
@@ -11,3 +13,23 @@ sudo nano /etc/sysconfig/docker-storage
 DOCKER_STORAGE_OPTIONS= --storage-opt dm.basesize=30G
 sudo service docker start
 ```
+
+
+## Ubuntu and no memory swap supported
+
+https://unix.stackexchange.com/questions/342735/docker-warning-no-swap-limit-support
+
+> You can enable these capabilities on Ubuntu or Debian by following these instructions. Memory and swap accounting incur an overhead of about 1% of the total available memory and a 10% overall performance degradation, even if Docker is not running.
+
+1) Log into the Ubuntu or Debian host as a user with sudo privileges.
+
+2) Edit the /etc/default/grub file. Add or edit the GRUB_CMDLINE_LINUX line to add the following two key-value pairs:
+
+`$ sudo nano  /etc/default/grub`
+> `GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"`
+
+3) Update GRUB.
+
+`$ sudo update-grub && sudo reboot` 
+
+You will get kidcked out from the instance but that's ok. Log in after 2'.
