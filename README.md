@@ -25,7 +25,13 @@ sudo service docker start
 
 https://unix.stackexchange.com/questions/342735/docker-warning-no-swap-limit-support
 
-> You can enable these capabilities on Ubuntu or Debian by following these instructions. Memory and swap accounting incur an overhead of about 1% of the total available memory and a 10% overall performance degradation, even if Docker is not running.
+
+
+
+<details>
+<summary>
+You can enable these capabilities on Ubuntu or Debian by following these instructions. Memory and swap accounting incur an overhead of about 1% of the total available memory and a 10% overall performance degradation, even if Docker is not running.
+</summary>
 
 1) Log into the Ubuntu or Debian host as a user with sudo privileges.
 
@@ -39,3 +45,6 @@ https://unix.stackexchange.com/questions/342735/docker-warning-no-swap-limit-sup
 `$ sudo update-grub && sudo reboot` 
 
 You will get kidcked out from the instance but that's ok. Log in after 2'.
+
+</details>
+
