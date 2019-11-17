@@ -2,7 +2,7 @@
 Useful scripts, snippets and guidelines for common tasks related to docker
 
 
-## Centos and very big container
+## Centos ec2 instance and very big container
 
 <details>
 <summary>
