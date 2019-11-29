@@ -1,15 +1,17 @@
 # dockies
 Useful scripts, snippets and guidelines for common tasks related to docker
 
-## Mount your current directory for input and output:
+## Include and export files to/from container
 
 <details>
 <summary>
-  
+Mount your current directory for input and output:
+</summary>
+
 ```bash
 sudo docker run -it  -v "$PWD":"$PWD" -w "$PWD" broadinstitute/gatk
 ```
-</summary>
+</details>
 
 
 ## Centos ec2 instance and very big container
