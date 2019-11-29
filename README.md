@@ -1,6 +1,16 @@
 # dockies
 Useful scripts, snippets and guidelines for common tasks related to docker
 
+## Mount your current directory for input and output:
+
+<details>
+<summary>
+  
+```bash
+sudo docker run -it  -v "$PWD":"$PWD" -w "$PWD" broadinstitute/gatk
+```
+</summary>
+
 
 ## Centos ec2 instance and very big container
 
