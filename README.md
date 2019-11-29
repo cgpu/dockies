@@ -9,7 +9,7 @@ Mount your current directory for input and output:
 </summary>
 
 ```bash
-sudo docker run -it  -v "$PWD":"$PWD" -w "$PWD" broadinstitute/gatk
+docker run -it  -v "$PWD":"$PWD" -w "$PWD" broadinstitute/gatk
 ```
 </details>
 
